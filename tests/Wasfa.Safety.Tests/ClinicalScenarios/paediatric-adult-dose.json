@@ -1,0 +1,30 @@
+{
+  "scenarioName": "Paediatric Patient Prescribed Excessive Adult Dose",
+  "patient": {
+    "ageYears": 4,
+    "weightKg": 16.0,
+    "gender": "female",
+    "isPregnant": false,
+    "renalImpairment": "Normal",
+    "activeMedications": [],
+    "allergies": [],
+    "conditionCodes": ["H66.9"]
+  },
+  "proposedMedication": {
+    "moleculeCode": "J01CA04",
+    "brandName": "Amoxil",
+    "doseQuantity": 1000.0,
+    "doseUnit": "mg",
+    "frequency": "TID",
+    "durationDays": 7,
+    "dailyDoseMg": 3000.0,
+    "singleDoseMg": 1000.0
+  },
+  "expectedFindings": [
+    {
+      "code": "DOSE.PAEDIATRIC.EXCEEDED_DAILY",
+      "severity": "Major",
+      "requiresReasonToOverride": true
+    }
+  ]
+}

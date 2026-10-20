@@ -1,0 +1,38 @@
+{
+  "scenarioName": "Two Brands of the Same Molecule (Panadol and Adol Paracetamol Duplication)",
+  "patient": {
+    "ageYears": 42,
+    "weightKg": 70.0,
+    "gender": "female",
+    "isPregnant": false,
+    "renalImpairment": "Normal",
+    "activeMedications": [
+      {
+        "id": "med-active-panadol",
+        "moleculeCode": "N02BE01",
+        "brandName": "Panadol",
+        "strength": "500 mg",
+        "frequency": "TID",
+        "authoredOn": "2026-02-01T00:00:00Z",
+        "status": "active"
+      }
+    ],
+    "allergies": [],
+    "conditionCodes": ["R51"]
+  },
+  "proposedMedication": {
+    "moleculeCode": "N02BE01",
+    "brandName": "Adol",
+    "doseQuantity": 500.0,
+    "doseUnit": "mg",
+    "frequency": "QID",
+    "durationDays": 7
+  },
+  "expectedFindings": [
+    {
+      "code": "DUPLICATE.MOLECULE.N02BE01",
+      "severity": "Major",
+      "requiresReasonToOverride": true
+    }
+  ]
+}

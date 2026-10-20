@@ -1,0 +1,332 @@
+<!-- ================================================================
+     WASFA (وصفة) — Prescriber Station Template
+     Clinical calm with unmissable severity-graded safety warnings
+     ================================================================ -->
+
+<!-- Topbar -->
+<header class="topbar">
+  <div class="topbar__brand">
+    <span>💊 WASFA</span>
+    <span class="arabic">وصفة</span>
+  </div>
+
+  <div style="display:flex; align-items:center; gap: 1rem;">
+    <!-- Demo Patient Selector -->
+    <div style="display:flex; align-items:center; gap:.5rem; font-size:.85rem;">
+      <span style="opacity:.8;">Patient:</span>
+      <select 
+        style="padding:.35rem .75rem; border-radius:4px; border:1px solid rgba(255,255,255,.3); background:#134542; color:#fff; font-family:inherit;"
+        [ngModel]="selectedPatient()?.id" 
+        (ngModelChange)="onPatientChange($event)">
+        @for (p of patients; track p.id) {
+          <option [value]="p.id">{{ p.nameEn }} ({{ p.nameAr }})</option>
+        }
+      </select>
+    </div>
+
+    <!-- Language Toggle -->
+    <button 
+      class="btn btn--secondary" 
+      style="color:#fff; border-color:rgba(255,255,255,.4); padding:.25rem .6rem; font-size:.78rem;"
+      (click)="toggleLang()">
+      {{ lang() === 'en' ? 'العربية' : 'English' }}
+    </button>
+
+    <!-- Disclaimer Badge -->
+    <button class="topbar__disclaimer-badge" (click)="showDisclaimer.set(!showDisclaimer())">
+      Clinical Disclaimer
+    </button>
+  </div>
+</header>
+
+<!-- Interactive Clinical Demo Bar for Showcasing & GitHub Screenshots -->
+<div style="background:#0D1F1E; border-bottom:1px solid #1B5E5A; padding:.5rem 1.5rem; display:flex; align-items:center; gap:.75rem; flex-wrap:wrap; font-size:.8rem; color:#A4BDBB;">
+  <span style="display:flex; align-items:center; gap:.4rem; font-weight:bold; color:#FCBF49;">
+    <span>⚡ Quick Demo Scenarios:</span>
+  </span>
+  <button 
+    style="background:rgba(214,40,40,.2); border:1px solid #D62828; color:#FFA4A4; padding:.25rem .65rem; border-radius:4px; cursor:pointer; font-size:.76rem; font-weight:600;"
+    (click)="loadScenario('pat-1001', 'M01AE01', 400, 'mg', 'TID')">
+    ⚠️ 1. Warfarin + Ibuprofen (DDI Bleeding Risk)
+  </button>
+  <button 
+    style="background:rgba(139,0,0,.25); border:1px solid #8B0000; color:#FF9999; padding:.25rem .65rem; border-radius:4px; cursor:pointer; font-size:.76rem; font-weight:600;"
+    (click)="loadScenario('pat-1003', 'J01CA04', 500, 'mg', 'TID')">
+    🚫 2. Penicillin Allergy + Amoxicillin
+  </button>
+  <button 
+    style="background:rgba(247,127,0,.2); border:1px solid #F77F00; color:#FFCA99; padding:.25rem .65rem; border-radius:4px; cursor:pointer; font-size:.76rem; font-weight:600;"
+    (click)="loadScenario('pat-1005', 'J01CA04', 1000, 'mg', 'TID')">
+    🧒 3. Paediatric Overdose (Child 5y)
+  </button>
+  <button 
+    style="background:rgba(139,0,0,.25); border:1px solid #8B0000; color:#FF9999; padding:.25rem .65rem; border-radius:4px; cursor:pointer; font-size:.76rem; font-weight:600;"
+    (click)="loadScenario('pat-1007', 'A10BA02', 850, 'mg', 'BID')">
+    🫘 4. Metformin in Severe CKD
+  </button>
+  <button 
+    style="background:rgba(42,157,143,.2); border:1px solid #2A9D8F; color:#A7E8DE; padding:.25rem .65rem; border-radius:4px; cursor:pointer; font-size:.76rem; font-weight:600;"
+    (click)="loadScenario('pat-1009', 'N02BE01', 500, 'mg', 'TID')">
+    ✓ 5. Safe Regimen (Zero Alerts)
+  </button>
+</div>
+
+<!-- Disclaimer Banner (Toggleable) -->
+@if (showDisclaimer()) {
+  <div class="disclaimer-banner">
+    <span>⚠️ <strong>Clinical Notice:</strong> Demonstration platform for educational & evaluation purposes only. Not a certified clinical decision-support system. All interactions must be verified against authoritative clinical sources.</span>
+    <button style="margin-left:auto; background:none; border:none; cursor:pointer;" (click)="showDisclaimer.set(false)">✕</button>
+  </div>
+}
+
+<div class="main-content" [attr.dir]="isRtl ? 'rtl' : 'ltr'">
+
+  <!-- Patient Header Bar -->
+  <section class="patient-header">
+    <div class="patient-header__name">
+      {{ isRtl ? selectedPatient()?.nameAr : selectedPatient()?.nameEn }}
+      <span style="font-weight:400; color:var(--muted); font-size:.9rem; margin-inline-start:.4rem;">
+        ({{ isRtl ? selectedPatient()?.nameEn : selectedPatient()?.nameAr }})
+      </span>
+    </div>
+
+    <div class="patient-header__meta">
+      <span class="meta-chip">Age: {{ selectedPatient()?.ageYears }}y</span>
+      @if (selectedPatient()?.weightKg) {
+        <span class="meta-chip">Weight: {{ selectedPatient()?.weightKg }} kg</span>
+      }
+      <span class="meta-chip">Gender: {{ selectedPatient()?.gender }}</span>
+
+      @if (selectedPatient()?.isPregnant) {
+        <span class="meta-chip meta-chip--pregnant">⚠️ Pregnant</span>
+      }
+
+      @if (selectedPatient()?.renalImpairment && selectedPatient()?.renalImpairment !== 'Normal') {
+        <span class="meta-chip meta-chip--renal">Kidney: {{ selectedPatient()?.renalImpairment }}</span>
+      }
+
+      <!-- Allergies -->
+      @for (al of selectedPatient()?.allergies ?? []; track al.code) {
+        <span class="meta-chip meta-chip--allergy">⛔ Allergy: {{ al.displayName }}</span>
+      }
+
+      <!-- Active Conditions -->
+      @for (cond of selectedPatient()?.conditionCodes ?? []; track cond) {
+        <span class="meta-chip meta-chip--condition">Dx: {{ cond }}</span>
+      }
+    </div>
+  </section>
+
+  <!-- Left: Current Active Medications Panel -->
+  <aside class="meds-panel">
+    <div class="meds-panel__title">
+      <span>Current Medications</span>
+      <span class="count-badge">{{ selectedPatient()?.activeMedications?.length ?? 0 }}</span>
+    </div>
+
+    @if ((selectedPatient()?.activeMedications?.length ?? 0) === 0) {
+      <p style="font-size:.85rem; color:var(--muted); padding:1rem 0;">No active medications recorded for this patient.</p>
+    }
+
+    @for (med of selectedPatient()?.activeMedications ?? []; track med.id) {
+      <div class="med-card med-card--active">
+        <div class="med-card__name">{{ med.brandName }}</div>
+        <div class="med-card__brand">{{ med.moleculeCode }}</div>
+        <div class="med-card__dose">{{ med.strength }} · {{ med.frequency }}</div>
+      </div>
+    }
+  </aside>
+
+  <!-- Right: Prescribe & Safety Engine Station -->
+  <main class="prescribe-panel">
+    
+    <!-- Drug Search Input with Auto-complete -->
+    <div class="drug-search-wrapper">
+      <label class="form-label">Search Drug / Molecule (ATC / Generic / Brand)</label>
+      <div style="position:relative; margin-top:.4rem;">
+        <span class="drug-search-icon">🔍</span>
+        <input 
+          type="text" 
+          class="drug-search-input"
+          placeholder="e.g. Ibuprofen, Metformin, Amoxicillin, Aspirin..."
+          [ngModel]="drugSearch()"
+          (ngModelChange)="onSearchChange($event)"
+          (focus)="onSearchFocus()"
+        />
+
+        @if (showResults() && searchResults().length > 0) {
+          <div class="drug-search-results">
+            @for (item of searchResults(); track item.code) {
+              <div class="drug-result-item" (click)="selectMolecule(item)">
+                <div>
+                  <div class="drug-result__molecule">{{ item.nameEn }} ({{ item.nameAr }})</div>
+                  <div class="drug-result__brand">ATC: {{ item.code }}</div>
+                </div>
+                <span class="drug-result__category">{{ item.category }}</span>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+
+    <!-- Proposed Dosage & Form -->
+    @if (selectedMolecule()) {
+      <div class="dose-form" style="background:var(--surface); padding:1rem; border-radius:var(--radius-md); border:1px solid var(--rule);">
+        <div class="form-field">
+          <label class="form-label">Dose Quantity & Unit</label>
+          <div style="display:flex; gap:.5rem;">
+            <input 
+              type="number" 
+              class="form-input" 
+              [ngModel]="doseQty()" 
+              (ngModelChange)="updateDoseQty($event)"
+            />
+            <select class="form-select" [ngModel]="doseUnit()" (ngModelChange)="updateDoseUnit($event)" style="width:90px;">
+              <option value="mg">mg</option>
+              <option value="g">g</option>
+              <option value="mcg">mcg</option>
+              <option value="ml">ml</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Frequency</label>
+          <select class="form-select" [ngModel]="frequency()" (ngModelChange)="updateFrequency($event)">
+            <option value="QD">Once daily (QD)</option>
+            <option value="BID">Twice daily (BID)</option>
+            <option value="TID">Three times daily (TID)</option>
+            <option value="QID">Four times daily (QID)</option>
+            <option value="PRN">As needed (PRN)</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Duration (Days)</label>
+          <input 
+            type="number" 
+            class="form-input" 
+            [ngModel]="duration()" 
+            (ngModelChange)="updateDuration($event)"
+          />
+        </div>
+
+        <div class="form-field" style="justify-content: flex-end;">
+          <button class="btn btn--secondary" (click)="runSafetyCheck()">
+            🔄 Re-run Live Safety Check
+          </button>
+        </div>
+      </div>
+    }
+
+    <!-- Checking Spinner -->
+    @if (isChecking()) {
+      <div class="checking-indicator">
+        <div class="spinner"></div>
+        <span>Evaluating drug against active medications, renal flags, age, allergies, and contraindications...</span>
+      </div>
+    }
+
+    <!-- Safety Findings Stack (Ordered by Severity) -->
+    @if (!isChecking() && selectedMolecule()) {
+      <div class="warning-stack">
+        @if (findings().length === 0) {
+          <div class="safe-state">
+            <span>✓ No clinical safety contraindications or major interactions detected. Safe to prescribe.</span>
+          </div>
+        } @else {
+          <div class="warning-stack__title">
+            <span>Safety Engine Findings ({{ findings().length }})</span>
+          </div>
+
+          @for (f of sortedFindings(); track f.code) {
+            <div class="warning-banner" [ngClass]="severityClass(f.severity)">
+              <div class="warning-banner__severity">
+                <span>{{ severityIcon(f.severity) }}</span>
+                <span>{{ f.severity }} WARNING — {{ f.code }}</span>
+              </div>
+
+              <div class="warning-banner__drugs">
+                {{ isRtl ? f.titleAr : f.titleEn }}
+              </div>
+
+              <div class="warning-banner__explanation">
+                {{ isRtl ? f.explanationAr : f.explanationEn }}
+              </div>
+
+              <div class="warning-banner__citation">
+                <span>📚 Evidence: {{ f.source }}</span>
+              </div>
+
+              <div class="warning-banner__actions">
+                <button class="btn btn--secondary" (click)="selectedMolecule.set(null); drugSearch.set('')">
+                  Change Drug
+                </button>
+
+                @if (f.requiresReasonToOverride) {
+                  <button class="btn btn--danger" (click)="toggleOverride(f.code)">
+                    {{ showOverrideFor()[f.code] ? 'Hide Override Reason' : 'Override with Clinical Reason' }}
+                  </button>
+                }
+              </div>
+
+              @if (f.requiresReasonToOverride && showOverrideFor()[f.code]) {
+                <div style="margin-top:.75rem;">
+                  <label class="form-label" style="color:var(--severity-contraindicated);">
+                    Mandatory Clinical Rationale for Override:
+                  </label>
+                  <textarea 
+                    class="override-reason-input"
+                    placeholder="Document clinical justification (e.g. Benefit outweighs risk; patient monitored closely; alternative unavailable)..."
+                    [ngModel]="overrideReasons()[f.code] || ''"
+                    (ngModelChange)="setOverrideReason(f.code, $event)">
+                  </textarea>
+                </div>
+              }
+            </div>
+          }
+        }
+      </div>
+
+      <!-- Sign & Issue Prescription Button -->
+      <div style="margin-top:1.5rem;">
+        <button 
+          class="btn btn--sign" 
+          [disabled]="!canSign()" 
+          (click)="signPrescription()">
+          ✍️ Sign &amp; Issue E-Prescription (Generate QR)
+        </button>
+        @if (!canSign() && findings().length > 0) {
+          <p style="font-size:.78rem; color:var(--severity-contraindicated); text-align:center; margin-top:.5rem;">
+            ⚠️ You must provide a documented clinical reason for all high-severity warnings before signing.
+          </p>
+        }
+      </div>
+    }
+
+  </main>
+</div>
+
+<!-- Modal: Prescription Successfully Issued -->
+@if (issuedCode()) {
+  <div class="prescription-issued">
+    <div class="prescription-card">
+      <div class="prescription-card__checkmark">✓</div>
+      <h2 style="color:var(--ink); font-size:1.3rem;">Prescription Signed &amp; Issued</h2>
+      <p class="prescription-card__sub">HL7 FHIR MedicationRequest resource registered.</p>
+
+      <div class="prescription-card__code">
+        {{ issuedCode() }}
+      </div>
+
+      <p style="font-size:.85rem; color:var(--muted); margin-bottom:1.5rem;">
+        The patient or pharmacy can scan or enter this code in the Wasfa Pharmacy portal to dispense.
+      </p>
+
+      <button class="btn btn--primary" style="width:100%; justify-content:center;" (click)="closePrescription()">
+        Done &amp; Next Prescription
+      </button>
+    </div>
+  </div>
+}

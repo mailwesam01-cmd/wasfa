@@ -1,0 +1,28 @@
+{
+  "scenarioName": "Aspirin in Paediatric Patient (Reye Syndrome Contraindication)",
+  "patient": {
+    "ageYears": 9,
+    "weightKg": 28.0,
+    "gender": "male",
+    "isPregnant": false,
+    "renalImpairment": "Normal",
+    "activeMedications": [],
+    "allergies": [],
+    "conditionCodes": ["B34.9"]
+  },
+  "proposedMedication": {
+    "moleculeCode": "N02BA01",
+    "brandName": "Disprin",
+    "doseQuantity": 300.0,
+    "doseUnit": "mg",
+    "frequency": "TID",
+    "durationDays": 3
+  },
+  "expectedFindings": [
+    {
+      "code": "AGE.PAEDIATRIC.REYE_SYNDROME",
+      "severity": "Contraindicated",
+      "requiresReasonToOverride": true
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+# ── .NET Build Artifacts ──
+bin/
+obj/
+*.db
+*.db-shm
+*.db-wal
+appsettings.Development.json
+*.user
+*.suo
+
+# ── Node / Angular ──
+node_modules/
+dist/
+.angular/
+
+# ── Flutter / Dart ──
+.dart_tool/
+.packages
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# ── OS & IDE ──
+.vscode/
+.idea/
+Thumbs.db
+[Dd]esktop.ini

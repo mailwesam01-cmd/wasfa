@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Wasfa.Api/Wasfa.Api.csproj" />
+    <Project Path="src/Wasfa.Domain/Wasfa.Domain.csproj" />
+    <Project Path="src/Wasfa.Infrastructure/Wasfa.Infrastructure.csproj" />
+    <Project Path="src/Wasfa.Safety/Wasfa.Safety.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Wasfa.Api.IntegrationTests/Wasfa.Api.IntegrationTests.csproj" />
+    <Project Path="tests/Wasfa.Safety.Tests/Wasfa.Safety.Tests.csproj" />
+  </Folder>
+</Solution>

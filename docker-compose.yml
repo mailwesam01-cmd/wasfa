@@ -1,0 +1,59 @@
+services:
+  # ── Wasfa Clinical Engine & FHIR API ──────────────────────────
+  api:
+    build:
+      context: .
+      dockerfile: src/Wasfa.Api/Dockerfile
+    container_name: wasfa-api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ASPNETCORE_URLS=http://+:5000
+      - ConnectionStrings__DefaultConnection=Host=postgres;Port=5432;Database=wasfa_db;Username=wasfa_user;Password=wasfa_secret;
+      - KnowledgeBase__Path=/app/knowledge-base
+    ports:
+      - "5000:5000"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - wasfa-net
+
+  # ── Prescriber Workstation (Angular) ──────────────────────────
+  prescriber:
+    build:
+      context: apps/prescriber
+      dockerfile: Dockerfile
+    container_name: wasfa-prescriber
+    ports:
+      - "4200:80"
+    depends_on:
+      - api
+    networks:
+      - wasfa-net
+
+  # ── PostgreSQL Store (FHIR JSONB + Audit Log + Projections) ───
+  postgres:
+    image: postgres:16-alpine
+    container_name: wasfa-postgres
+    environment:
+      - POSTGRES_USER=wasfa_user
+      - POSTGRES_PASSWORD=wasfa_secret
+      - POSTGRES_DB=wasfa_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - wasfa_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U wasfa_user -d wasfa_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+    networks:
+      - wasfa-net
+
+networks:
+  wasfa-net:
+    driver: bridge
+
+volumes:
+  wasfa_pgdata:

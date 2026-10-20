@@ -1,0 +1,28 @@
+{
+  "scenarioName": "Pregnancy Category X Severe Teratogen Contraindication",
+  "patient": {
+    "ageYears": 24,
+    "weightKg": 58.0,
+    "gender": "female",
+    "isPregnant": true,
+    "renalImpairment": "Normal",
+    "activeMedications": [],
+    "allergies": [],
+    "conditionCodes": ["L70.0"]
+  },
+  "proposedMedication": {
+    "moleculeCode": "D10BA01",
+    "brandName": "Roaccutane",
+    "doseQuantity": 20.0,
+    "doseUnit": "mg",
+    "frequency": "BID",
+    "durationDays": 30
+  },
+  "expectedFindings": [
+    {
+      "code": "PREGNANCY.CONTRAINDICATED.CAT_X.D10BA01",
+      "severity": "Contraindicated",
+      "requiresReasonToOverride": true
+    }
+  ]
+}

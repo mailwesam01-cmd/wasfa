@@ -1,0 +1,93 @@
+[
+  {
+    "id": "DDI.WARFARIN.NSAID",
+    "moleculeCodeA": "B01AA03",
+    "moleculeCodeB": "M01AE01",
+    "severity": "Major",
+    "titleEn": "Major Bleeding Risk: Warfarin + Ibuprofen (NSAID)",
+    "titleAr": "خطر نزيف شديد: وارفارين + إيبوبروفين (NSAID)",
+    "mechanismEn": "NSAIDs inhibit platelet COX-1 and cause gastric mucosal erosion, compounding anticoagulant bleeding risk.",
+    "mechanismAr": "تثبط NSAIDs إنزيم COX-1 الصفيحي وتسبب تآكل الغشاء المخاطي المعدي، مما يضاعف خطر النزيف مع الأدوية المضادة للتخثر.",
+    "clinicalConsequenceEn": "Concomitant use significantly elevates the risk of severe, potentially life-threatening gastrointestinal hemorrhage due to dual antiplatelet and anticoagulant effect with NSAID-induced gastric ulceration.",
+    "clinicalConsequenceAr": "الاستخدام المتزامن يرفع بشكل حاد خطر حدوث نزيف هضمي حاد مهدد للحياة نتيجة اجتماع التأثير المضاد للتخثر مع التقرح المعدي.",
+    "source": "British National Formulary (BNF) Appendix 1: Warfarin interactions; FDA Black Box Warning for NSAIDs and Anticoagulants."
+  },
+  {
+    "id": "DDI.WARFARIN.DICLOFENAC",
+    "moleculeCodeA": "B01AA03",
+    "moleculeCodeB": "M01AB05",
+    "severity": "Major",
+    "titleEn": "Major Bleeding Risk: Warfarin + Diclofenac",
+    "titleAr": "خطر نزيف شديد: وارفارين + ديكلوفيناك",
+    "mechanismEn": "Diclofenac inhibits platelet COX-1 and promotes mucosal damage, greatly amplifying anticoagulant bleeding risk.",
+    "mechanismAr": "الديكلوفيناك يثبط الصفائح الدموية ويسبب تآكل معدياً يضاعف خطر النزيف.",
+    "clinicalConsequenceEn": "Severe or fatal gastrointestinal bleeding due to additive antiplatelet and anticoagulant effects combined with mucosal damage.",
+    "clinicalConsequenceAr": "نزيف معدي معوي حاد أو مميت نتيجة التأثير المضاعف على الصفائح والتخثر مع الضرر المخاطي.",
+    "source": "Chest Antithrombotic Therapy Guidelines; BNF: Oral anticoagulants + NSAIDs."
+  },
+  {
+    "id": "DDI.ACEI.SPIRONOLACTONE",
+    "moleculeCodeA": "C09AA02",
+    "moleculeCodeB": "C03DA01",
+    "severity": "Major",
+    "titleEn": "Severe Hyperkalemia Risk: Enalapril + Spironolactone",
+    "titleAr": "خطر فرط بوتاسيوم الدم الحاد: إنالابريل + سبيرونولاكتون",
+    "mechanismEn": "Dual RAAS blockade suppresses aldosterone-mediated potassium excretion causing dangerous potassium accumulation.",
+    "mechanismAr": "الحصار المزدوج لمحور RAAS يثبط طرح البوتاسيوم الكلوي مسبباً تراكمه.",
+    "clinicalConsequenceEn": "Concurrent blockade of the renin-angiotensin-aldosterone system causes severe, potentially fatal hyperkalemia and cardiac conduction abnormalities.",
+    "clinicalConsequenceAr": "الحصار المزدوج لمحور الرينين-أنجيوتنسين-ألدوستيرون يسبب فرطاً حاداً ومميتاً في بوتاسيوم الدم واضطرابات في نظم القلب.",
+    "source": "ACC/AHA Heart Failure Guidelines; BNF: ACE inhibitors + Potassium-sparing diuretics."
+  },
+  {
+    "id": "DDI.CLOPIDOGREL.OMEPRAZOLE",
+    "moleculeCodeA": "B01AC04",
+    "moleculeCodeB": "A02BC01",
+    "severity": "Moderate",
+    "titleEn": "Reduced Antiplatelet Efficacy: Clopidogrel + Omeprazole",
+    "titleAr": "انخفاض الفعالية المضادة للصفائح: كلوبيدوغريل + أوميبرازول",
+    "mechanismEn": "Omeprazole competitively inhibits CYP2C19, reducing clopidogrel bioactivation to its active thiol metabolite.",
+    "mechanismAr": "يثبط أوميبرازول CYP2C19 الضروري لتحويل كلوبيدوغريل إلى شكله الفعال.",
+    "clinicalConsequenceEn": "Omeprazole significantly reduces the bioactivation of clopidogrel, increasing ischemic cardiovascular events risk.",
+    "clinicalConsequenceAr": "يقلل أوميبرازول تفعيل كلوبيدوغريل مما يزيد من خطر الأحداث القلبية الإقفارية.",
+    "source": "FDA Drug Safety Communication (2010): Updated information on clopidogrel-omeprazole interaction."
+  },
+  {
+    "id": "DDI.SIMVASTATIN.CLARITHROMYCIN",
+    "moleculeCodeA": "C10AA01",
+    "moleculeCodeB": "J01FA09",
+    "severity": "Contraindicated",
+    "titleEn": "Absolute Contraindication: Simvastatin + Clarithromycin (Rhabdomyolysis)",
+    "titleAr": "مضاد استطباب مطلق: سيمفاستاتين + كلاريثروميسين (انحلال الربيدات)",
+    "mechanismEn": "Clarithromycin is a potent CYP3A4 and P-glycoprotein inhibitor causing massive elevation of simvastatin plasma concentrations.",
+    "mechanismAr": "الكلاريثروميسين مثبط قوي لـ CYP3A4 وبروتين P-gp مما يسبب ارتفاعاً هائلاً في تركيز سيمفاستاتين في الدم.",
+    "clinicalConsequenceEn": "Severe toxic myopathy and potentially fatal rhabdomyolysis with acute renal failure due to massive simvastatin accumulation.",
+    "clinicalConsequenceAr": "اعتلال عضلي سمي حاد وانحلال ربيدات مميت محتمل مع فشل كلوي حاد نتيجة تراكم السيمفاستاتين بشكل هائل.",
+    "source": "FDA Black Box Warning: Simvastatin + CYP3A4 strong inhibitors; SmPC Zocor."
+  },
+  {
+    "id": "DDI.STATIN.MACROLIDE",
+    "moleculeCodeA": "C10AA05",
+    "moleculeCodeB": "J01FA10",
+    "severity": "Moderate",
+    "titleEn": "Myopathy Risk: Atorvastatin + Azithromycin",
+    "titleAr": "خطر اعتلال العضلات: أتورفاستاتين + أزيثروميسين",
+    "mechanismEn": "Azithromycin mildly inhibits CYP3A4 and P-gp, moderately elevating atorvastatin plasma levels.",
+    "mechanismAr": "أزيثروميسين يثبط CYP3A4 و P-gp بشكل معتدل مما يرفع مستوى أتورفاستاتين في الدم.",
+    "clinicalConsequenceEn": "Moderate increase in atorvastatin concentrations may precipitate muscle pain, myositis, or rarely rhabdomyolysis.",
+    "clinicalConsequenceAr": "الارتفاع المعتدل في مستوى الأتورفاستاتين قد يسبب آلام عضلية أو التهاب عضلات.",
+    "source": "FDA Drug Safety Warning: Statin and Macrolide co-administration."
+  },
+  {
+    "id": "DDI.METFORMIN.FUROSEMIDE",
+    "moleculeCodeA": "A10BA02",
+    "moleculeCodeB": "C03CA01",
+    "severity": "Moderate",
+    "titleEn": "Volume Depletion & Lactic Acidosis Risk: Metformin + Furosemide",
+    "titleAr": "خطر نقص السوائل والحماض اللبني: ميتفورمين + فوروسيميد",
+    "mechanismEn": "Furosemide-induced volume depletion can transiently impair renal function, reducing metformin clearance.",
+    "mechanismAr": "نقص الحجم الناتج عن الفوروسيميد قد يقلل من وظائف الكلى مؤقتاً مما يضعف تصريف الميتفورمين.",
+    "clinicalConsequenceEn": "Loop diuretics may cause dehydration and transient renal compromise, reducing metformin clearance and increasing lactic acidosis risk.",
+    "clinicalConsequenceAr": "مدرات البول العروية قد تؤدي إلى جفاف وقصور كلوي عابر مما يزيد خطر الحماض اللبني.",
+    "source": "ADA Standards of Medical Care in Diabetes: Metformin safety warnings."
+  }
+]

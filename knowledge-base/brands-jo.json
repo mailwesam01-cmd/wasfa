@@ -1,0 +1,282 @@
+[
+  {
+    "brandName": "Voltaren 50mg Tablet",
+    "brandNameAr": "فولتارين",
+    "moleculeCode": "M01AB05",
+    "manufacturer": "Novartis",
+    "form": "Tablet",
+    "strength": "50 mg"
+  },
+  {
+    "brandName": "Cataflam 50mg Tablet",
+    "brandNameAr": "كاتافلام",
+    "moleculeCode": "M01AB05",
+    "manufacturer": "Novartis",
+    "form": "Tablet",
+    "strength": "50 mg"
+  },
+  {
+    "brandName": "Diclogesic 50mg",
+    "brandNameAr": "ديكلوجيزيك",
+    "moleculeCode": "M01AB05",
+    "manufacturer": "Dar Al Dawa (Jordan)",
+    "form": "Tablet",
+    "strength": "50 mg"
+  },
+  {
+    "brandName": "Clofen 75mg Ampoule",
+    "brandNameAr": "كلوفين",
+    "moleculeCode": "M01AB05",
+    "manufacturer": "Hikma Pharmaceuticals (Jordan)",
+    "form": "Ampoule",
+    "strength": "75 mg/3ml"
+  },
+  {
+    "brandName": "Coumadin 5mg",
+    "brandNameAr": "كومادين",
+    "moleculeCode": "B01AA03",
+    "manufacturer": "Bristol Myers Squibb",
+    "form": "Tablet",
+    "strength": "5 mg"
+  },
+  {
+    "brandName": "Warfin 1mg",
+    "brandNameAr": "وارفين",
+    "moleculeCode": "B01AA03",
+    "manufacturer": "Hikma Pharmaceuticals (Jordan)",
+    "form": "Tablet",
+    "strength": "1 mg"
+  },
+  {
+    "brandName": "Panadol 500mg Tablet",
+    "brandNameAr": "بنادول",
+    "moleculeCode": "N02BE01",
+    "manufacturer": "Haleon / GSK",
+    "form": "Tablet",
+    "strength": "500 mg"
+  },
+  {
+    "brandName": "Revanin 500mg",
+    "brandNameAr": "ريفانين",
+    "moleculeCode": "N02BE01",
+    "manufacturer": "Arab Pharmaceutical Manufacturing (Jordan)",
+    "form": "Tablet",
+    "strength": "500 mg"
+  },
+  {
+    "brandName": "Brufen 400mg",
+    "brandNameAr": "بروفين",
+    "moleculeCode": "M01AE01",
+    "manufacturer": "Abbott",
+    "form": "Tablet",
+    "strength": "400 mg"
+  },
+  {
+    "brandName": "Neurofen 200mg",
+    "brandNameAr": "نيوروفين",
+    "moleculeCode": "M01AE01",
+    "manufacturer": "Reckitt",
+    "form": "Tablet",
+    "strength": "200 mg"
+  },
+  {
+    "brandName": "Amoxil 500mg Capsule",
+    "brandNameAr": "أموكسيل",
+    "moleculeCode": "J01CA04",
+    "manufacturer": "GSK",
+    "form": "Capsule",
+    "strength": "500 mg"
+  },
+  {
+    "brandName": "Hiconcil 500mg",
+    "brandNameAr": "هيكونسيل",
+    "moleculeCode": "J01CA04",
+    "manufacturer": "Hikma Pharmaceuticals (Jordan)",
+    "form": "Capsule",
+    "strength": "500 mg"
+  },
+  {
+    "brandName": "Augmentin 1g Tablet",
+    "brandNameAr": "أوجمنتين",
+    "moleculeCode": "J01CR02",
+    "manufacturer": "GSK",
+    "form": "Tablet",
+    "strength": "1000 mg"
+  },
+  {
+    "brandName": "Curam 1000mg",
+    "brandNameAr": "كيورام",
+    "moleculeCode": "J01CR02",
+    "manufacturer": "Sandoz",
+    "form": "Tablet",
+    "strength": "1000 mg"
+  },
+  {
+    "brandName": "Glucophage 850mg",
+    "brandNameAr": "جلوكوفاج",
+    "moleculeCode": "A10BA02",
+    "manufacturer": "Merck",
+    "form": "Tablet",
+    "strength": "850 mg"
+  },
+  {
+    "brandName": "Formit 500mg",
+    "brandNameAr": "فورميت",
+    "moleculeCode": "A10BA02",
+    "manufacturer": "Hikma Pharmaceuticals (Jordan)",
+    "form": "Tablet",
+    "strength": "500 mg"
+  },
+  {
+    "brandName": "Renitec 10mg",
+    "brandNameAr": "رينيتك",
+    "moleculeCode": "C09AA02",
+    "manufacturer": "Organon / MSD",
+    "form": "Tablet",
+    "strength": "10 mg"
+  },
+  {
+    "brandName": "Angiotec 10mg",
+    "brandNameAr": "أنجيوتك",
+    "moleculeCode": "C09AA02",
+    "manufacturer": "Dar Al Dawa (Jordan)",
+    "form": "Tablet",
+    "strength": "10 mg"
+  },
+  {
+    "brandName": "Aldactone 25mg",
+    "brandNameAr": "ألداكتون",
+    "moleculeCode": "C03DA01",
+    "manufacturer": "Pfizer",
+    "form": "Tablet",
+    "strength": "25 mg"
+  },
+  {
+    "brandName": "Lipitor 20mg",
+    "brandNameAr": "ليبيتور",
+    "moleculeCode": "C10AA05",
+    "manufacturer": "Pfizer",
+    "form": "Tablet",
+    "strength": "20 mg"
+  },
+  {
+    "brandName": "Torvast 20mg",
+    "brandNameAr": "تورفاست",
+    "moleculeCode": "C10AA05",
+    "manufacturer": "Hikma Pharmaceuticals (Jordan)",
+    "form": "Tablet",
+    "strength": "20 mg"
+  },
+  {
+    "brandName": "Zocor 40mg",
+    "brandNameAr": "زوكور",
+    "moleculeCode": "C10AA01",
+    "manufacturer": "MSD / Merck",
+    "form": "Tablet",
+    "strength": "40 mg"
+  },
+  {
+    "brandName": "Klacid 500mg",
+    "brandNameAr": "كلاسيد",
+    "moleculeCode": "J01FA09",
+    "manufacturer": "AbbVie",
+    "form": "Tablet",
+    "strength": "500 mg"
+  },
+  {
+    "brandName": "Plavix 75mg",
+    "brandNameAr": "بلافيكس",
+    "moleculeCode": "B01AC04",
+    "manufacturer": "Sanofi",
+    "form": "Tablet",
+    "strength": "75 mg"
+  },
+  {
+    "brandName": "Losec 20mg",
+    "brandNameAr": "لوسيك",
+    "moleculeCode": "A02BC01",
+    "manufacturer": "AstraZeneca",
+    "form": "Capsule",
+    "strength": "20 mg"
+  },
+  {
+    "brandName": "Oprazole 20mg",
+    "brandNameAr": "أوبرازول",
+    "moleculeCode": "A02BC01",
+    "manufacturer": "Dar Al Dawa (Jordan)",
+    "form": "Capsule",
+    "strength": "20 mg"
+  },
+  {
+    "brandName": "Roaccutane 20mg",
+    "brandNameAr": "روأكيوتان",
+    "moleculeCode": "D10BA01",
+    "manufacturer": "Roche",
+    "form": "Capsule",
+    "strength": "20 mg"
+  },
+  {
+    "brandName": "Ciprobay 500mg",
+    "brandNameAr": "سيبروباي",
+    "moleculeCode": "J01MA02",
+    "manufacturer": "Bayer",
+    "form": "Tablet",
+    "strength": "500 mg"
+  },
+  {
+    "brandName": "Zithromax 500mg",
+    "brandNameAr": "زيثروماكس",
+    "moleculeCode": "J01FA10",
+    "manufacturer": "Pfizer",
+    "form": "Tablet",
+    "strength": "500 mg"
+  },
+  {
+    "brandName": "Bactrim Forte 960mg",
+    "brandNameAr": "باكتريم فورت",
+    "moleculeCode": "J01EE01",
+    "manufacturer": "Roche",
+    "form": "Tablet",
+    "strength": "960 mg"
+  },
+  {
+    "brandName": "Valium 5mg",
+    "brandNameAr": "فاليوم",
+    "moleculeCode": "N05BA01",
+    "manufacturer": "Roche",
+    "form": "Tablet",
+    "strength": "5 mg"
+  },
+  {
+    "brandName": "Lasix 40mg",
+    "brandNameAr": "لاسيكس",
+    "moleculeCode": "C03CA01",
+    "manufacturer": "Sanofi",
+    "form": "Tablet",
+    "strength": "40 mg"
+  },
+  {
+    "brandName": "Euthyrox 100mcg",
+    "brandNameAr": "يوثيروكس",
+    "moleculeCode": "H03AA01",
+    "manufacturer": "Merck",
+    "form": "Tablet",
+    "strength": "0.1 mg"
+  },
+  {
+    "brandName": "Forxiga 10mg",
+    "brandNameAr": "فوركسيغا",
+    "moleculeCode": "A10BK01",
+    "manufacturer": "AstraZeneca",
+    "form": "Tablet",
+    "strength": "10 mg"
+  },
+  {
+    "brandName": "Disprin 300mg",
+    "brandNameAr": "ديسبرين",
+    "moleculeCode": "N02BA01",
+    "manufacturer": "Reckitt",
+    "form": "Tablet",
+    "strength": "300 mg"
+  }
+]

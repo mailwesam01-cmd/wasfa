@@ -1,0 +1,93 @@
+[
+  {
+    "id": "ALLERGY_BETA_LACTAMS",
+    "nameEn": "Beta-Lactam Antibiotics (Penicillins & Cephalosporins)",
+    "nameAr": "المضادات الحيوية بيتا لاكتام (بنسلينات وسيفالوسبورينات)",
+    "descriptionEn": "Cross-reactivity between penicillins and cephalosporins is estimated at 1-3% based on shared beta-lactam ring structure and R1 side chain similarity.",
+    "descriptionAr": "التفاعل التبادلي بين البنسلينات والسيفالوسبورينات يُقدَّر بـ 1-3% استناداً لتشابه بنية حلقة بيتا لاكتام والسلاسل الجانبية R1.",
+    "crossReactivityRisk": "Major",
+    "citation": "Joint Task Force on Practice Parameters (AAAAI/ACAAI) Drug Allergy Practice Parameter (2022).",
+    "subgroups": [
+      {
+        "id": "ALLERGY_BETA_LACTAMS_PENICILLIN",
+        "nameEn": "Penicillins",
+        "nameAr": "البنسلينات",
+        "moleculeCodes": ["J01CA04", "J01CR02"]
+      },
+      {
+        "id": "ALLERGY_BETA_LACTAMS_CEPHALOSPORIN",
+        "nameEn": "Cephalosporins",
+        "nameAr": "السيفالوسبورينات",
+        "moleculeCodes": ["J01DB01", "J01DD04"]
+      }
+    ]
+  },
+  {
+    "id": "ALLERGY_NSAID",
+    "nameEn": "NSAIDs & Aspirin",
+    "nameAr": "مضادات الالتهاب غير الستيرويدية والأسبرين",
+    "descriptionEn": "Patients with NSAID/Aspirin-exacerbated respiratory disease risk severe bronchoconstriction upon exposure to any COX-1 inhibiting NSAID.",
+    "descriptionAr": "مرضى حساسية مضادات الالتهاب والأسبرين مهددون بتشنج قصبي حاد عند التعرض لأي دواء من هذه المجموعة.",
+    "crossReactivityRisk": "Contraindicated",
+    "citation": "EAACI Taskforce on NSAID Hypersensitivity.",
+    "subgroups": [
+      {
+        "id": "ALLERGY_NSAID_ALL",
+        "nameEn": "NSAIDs",
+        "nameAr": "مضادات الالتهاب",
+        "moleculeCodes": ["M01AB05", "M01AE01", "B01AC06", "N02BA01"]
+      }
+    ]
+  },
+  {
+    "id": "ALLERGY_SULFONAMIDE",
+    "nameEn": "Sulfonamide Antibiotics",
+    "nameAr": "مجموعة السلفوناميدات",
+    "descriptionEn": "Documented sulfonamide allergy carries high risk of Stevens-Johnson syndrome and toxic epidermal necrolysis upon re-exposure.",
+    "descriptionAr": "حساسية السلفا الموثقة ترتبط بخطر مرتفع لمتلازمة ستيفنز جونسون وتقشر البشرة السمي.",
+    "crossReactivityRisk": "Contraindicated",
+    "citation": "FDA Warning: Sulfonamide Antibacterial Hypersensitivity.",
+    "subgroups": [
+      {
+        "id": "ALLERGY_SULFONAMIDE_ANTIBIOTICS",
+        "nameEn": "Sulfonamide Antibiotics",
+        "nameAr": "المضادات الحيوية السلفونامايدية",
+        "moleculeCodes": ["J01EE01"]
+      }
+    ]
+  },
+  {
+    "id": "ALLERGY_FLUOROQUINOLONE",
+    "nameEn": "Fluoroquinolones",
+    "nameAr": "الفلوروكينولونات",
+    "descriptionEn": "Fluoroquinolone hypersensitivity manifests as urticaria, angioedema, or anaphylaxis. Cross-reactivity within the class is documented.",
+    "descriptionAr": "فرط حساسية الفلوروكينولون يظهر على شكل شرى أو وذمة وعائية أو صدمة تأقية. التفاعل التبادلي داخل المجموعة موثق.",
+    "crossReactivityRisk": "Major",
+    "citation": "WAO Drug Allergy Guidelines.",
+    "subgroups": [
+      {
+        "id": "ALLERGY_FLUOROQUINOLONE_ALL",
+        "nameEn": "Fluoroquinolones",
+        "nameAr": "مجموعة الكينولونات",
+        "moleculeCodes": ["J01MA02"]
+      }
+    ]
+  },
+  {
+    "id": "ALLERGY_MACROLIDE",
+    "nameEn": "Macrolide Antibiotics",
+    "nameAr": "المضادات الحيوية الماكروليدية",
+    "descriptionEn": "Macrolide allergy may cause skin reactions and occasionally anaphylaxis. Cross-reactivity within macrolide class is possible.",
+    "descriptionAr": "حساسية الماكروليدات قد تسبب تفاعلات جلدية وأحياناً صدمة تأقية. التفاعل التبادلي داخل المجموعة محتمل.",
+    "crossReactivityRisk": "Moderate",
+    "citation": "Clinical Pharmacology Drug Allergy Monographs.",
+    "subgroups": [
+      {
+        "id": "ALLERGY_MACROLIDE_ALL",
+        "nameEn": "Macrolides",
+        "nameAr": "الماكروليدات",
+        "moleculeCodes": ["J01FA10", "J01FA09"]
+      }
+    ]
+  }
+]

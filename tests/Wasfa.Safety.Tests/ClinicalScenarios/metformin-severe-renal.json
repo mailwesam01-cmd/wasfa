@@ -1,0 +1,28 @@
+{
+  "scenarioName": "Metformin in Severe Renal Impairment (Lactic Acidosis Contraindication)",
+  "patient": {
+    "ageYears": 62,
+    "weightKg": 70.0,
+    "gender": "male",
+    "isPregnant": false,
+    "renalImpairment": "Severe",
+    "activeMedications": [],
+    "allergies": [],
+    "conditionCodes": ["N18.4", "E11.9"]
+  },
+  "proposedMedication": {
+    "moleculeCode": "A10BA02",
+    "brandName": "Glucophage",
+    "doseQuantity": 1000.0,
+    "doseUnit": "mg",
+    "frequency": "BID",
+    "durationDays": 30
+  },
+  "expectedFindings": [
+    {
+      "code": "RENAL.CONTRAINDICATION.METFORMIN",
+      "severity": "Contraindicated",
+      "requiresReasonToOverride": true
+    }
+  ]
+}

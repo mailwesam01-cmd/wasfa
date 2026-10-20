@@ -1,0 +1,32 @@
+{
+  "scenarioName": "Safe Combination False-Positive Guard (Metformin + Paracetamol)",
+  "patient": {
+    "ageYears": 45,
+    "weightKg": 78.0,
+    "gender": "male",
+    "isPregnant": false,
+    "renalImpairment": "Normal",
+    "activeMedications": [
+      {
+        "id": "med-metformin",
+        "moleculeCode": "A10BA02",
+        "brandName": "Glucophage",
+        "strength": "850 mg",
+        "frequency": "BID",
+        "authoredOn": "2026-01-10T00:00:00Z",
+        "status": "active"
+      }
+    ],
+    "allergies": [],
+    "conditionCodes": ["E11.9"]
+  },
+  "proposedMedication": {
+    "moleculeCode": "N02BE01",
+    "brandName": "Panadol",
+    "doseQuantity": 500.0,
+    "doseUnit": "mg",
+    "frequency": "BID",
+    "durationDays": 3
+  },
+  "expectedFindings": []
+}

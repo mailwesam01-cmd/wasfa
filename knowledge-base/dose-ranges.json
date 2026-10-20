@@ -1,0 +1,93 @@
+[
+  {
+    "moleculeCode": "N02BE01",
+    "nameEn": "Paracetamol",
+    "maxAdultSingleDoseMg": 1000.0,
+    "maxAdultDailyDoseMg": 4000.0,
+    "paediatricDoseMgPerKgPerDose": 15.0,
+    "paediatricMaxDoseMgPerKgPerDay": 60.0,
+    "minAgeYears": 0.25,
+    "citation": "BNF Paracetamol dosing guidelines; FDA safety announcement on acetaminophen hepatotoxicity."
+  },
+  {
+    "moleculeCode": "M01AB05",
+    "nameEn": "Diclofenac",
+    "maxAdultSingleDoseMg": 75.0,
+    "maxAdultDailyDoseMg": 150.0,
+    "paediatricDoseMgPerKgPerDose": 1.0,
+    "paediatricMaxDoseMgPerKgPerDay": 3.0,
+    "minAgeYears": 1.0,
+    "citation": "JFDA & EMA Summary of Product Characteristics: Diclofenac maximum therapeutic dosage."
+  },
+  {
+    "moleculeCode": "M01AE01",
+    "nameEn": "Ibuprofen",
+    "maxAdultSingleDoseMg": 800.0,
+    "maxAdultDailyDoseMg": 2400.0,
+    "paediatricDoseMgPerKgPerDose": 10.0,
+    "paediatricMaxDoseMgPerKgPerDay": 40.0,
+    "minAgeYears": 0.5,
+    "citation": "AAP Guidelines on pediatric ibuprofen dosing."
+  },
+  {
+    "moleculeCode": "J01CA04",
+    "nameEn": "Amoxicillin",
+    "maxAdultSingleDoseMg": 1000.0,
+    "maxAdultDailyDoseMg": 3000.0,
+    "paediatricDoseMgPerKgPerDose": 30.0,
+    "paediatricMaxDoseMgPerKgPerDay": 90.0,
+    "minAgeYears": 0.1,
+    "citation": "IDSA Guidelines for Acute Bacterial Sinusitis and Otitis Media."
+  },
+  {
+    "moleculeCode": "A10BA02",
+    "nameEn": "Metformin",
+    "maxAdultSingleDoseMg": 1000.0,
+    "maxAdultDailyDoseMg": 2550.0,
+    "paediatricDoseMgPerKgPerDose": null,
+    "paediatricMaxDoseMgPerKgPerDay": null,
+    "minAgeYears": 10.0,
+    "renalDoseAdjustmentCrClThreshold": 30.0,
+    "citation": "ADA Clinical Practice Recommendations: Metformin titration and ceiling dosing."
+  },
+  {
+    "moleculeCode": "C09AA02",
+    "nameEn": "Enalapril",
+    "maxAdultSingleDoseMg": 20.0,
+    "maxAdultDailyDoseMg": 40.0,
+    "paediatricDoseMgPerKgPerDose": 0.25,
+    "paediatricMaxDoseMgPerKgPerDay": 0.5,
+    "minAgeYears": 1.0,
+    "citation": "AHA/ACC Hypertension Clinical Guidelines."
+  },
+  {
+    "moleculeCode": "B01AA03",
+    "nameEn": "Warfarin",
+    "maxAdultSingleDoseMg": 15.0,
+    "maxAdultDailyDoseMg": 15.0,
+    "paediatricDoseMgPerKgPerDose": 0.1,
+    "paediatricMaxDoseMgPerKgPerDay": 0.2,
+    "minAgeYears": 1.0,
+    "citation": "CHEST Antithrombotic Guidelines."
+  },
+  {
+    "moleculeCode": "N02BA01",
+    "nameEn": "Aspirin (analgesic/antipyretic)",
+    "maxAdultSingleDoseMg": 1000.0,
+    "maxAdultDailyDoseMg": 4000.0,
+    "paediatricDoseMgPerKgPerDose": null,
+    "paediatricMaxDoseMgPerKgPerDay": null,
+    "minAgeYears": 16.0,
+    "citation": "BNF: Aspirin contraindicated under age 16 due to Reye's Syndrome; MHRA Safety Warning."
+  },
+  {
+    "moleculeCode": "B01AC06",
+    "nameEn": "Aspirin (antiplatelet)",
+    "maxAdultSingleDoseMg": 325.0,
+    "maxAdultDailyDoseMg": 325.0,
+    "paediatricDoseMgPerKgPerDose": null,
+    "paediatricMaxDoseMgPerKgPerDay": null,
+    "minAgeYears": 16.0,
+    "citation": "BNF: Aspirin contraindicated under age 16 due to Reye's Syndrome."
+  }
+]

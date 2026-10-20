@@ -1,0 +1,38 @@
+{
+  "scenarioName": "Simvastatin plus Clarithromycin Absolute Contraindication (Rhabdomyolysis)",
+  "patient": {
+    "ageYears": 55,
+    "weightKg": 82.0,
+    "gender": "female",
+    "isPregnant": false,
+    "renalImpairment": "Normal",
+    "activeMedications": [
+      {
+        "id": "med-zocor",
+        "moleculeCode": "C10AA01",
+        "brandName": "Zocor",
+        "strength": "40 mg",
+        "frequency": "QD",
+        "authoredOn": "2026-01-15T00:00:00Z",
+        "status": "active"
+      }
+    ],
+    "allergies": [],
+    "conditionCodes": ["E78.0"]
+  },
+  "proposedMedication": {
+    "moleculeCode": "J01FA09",
+    "brandName": "Klacid",
+    "doseQuantity": 500.0,
+    "doseUnit": "mg",
+    "frequency": "BID",
+    "durationDays": 10
+  },
+  "expectedFindings": [
+    {
+      "code": "DDI.SIMVASTATIN.CLARITHROMYCIN",
+      "severity": "Contraindicated",
+      "requiresReasonToOverride": true
+    }
+  ]
+}

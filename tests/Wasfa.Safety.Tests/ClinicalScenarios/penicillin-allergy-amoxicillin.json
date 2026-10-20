@@ -1,0 +1,35 @@
+{
+  "scenarioName": "Penicillin Allergy Cross-Reactivity with Amoxicillin",
+  "patient": {
+    "ageYears": 29,
+    "weightKg": 62.0,
+    "gender": "male",
+    "isPregnant": false,
+    "renalImpairment": "Normal",
+    "activeMedications": [],
+    "allergies": [
+      {
+        "code": "ALLERGY_BETA_LACTAMS",
+        "displayName": "Penicillins & Beta-Lactams",
+        "criticality": "high",
+        "allergyGroupId": "ALLERGY_BETA_LACTAMS"
+      }
+    ],
+    "conditionCodes": ["J02.9"]
+  },
+  "proposedMedication": {
+    "moleculeCode": "J01CA04",
+    "brandName": "Amoxil",
+    "doseQuantity": 500.0,
+    "doseUnit": "mg",
+    "frequency": "TID",
+    "durationDays": 7
+  },
+  "expectedFindings": [
+    {
+      "code": "ALLERGY.CROSS.ALLERGY_BETA_LACTAMS",
+      "severity": "Major",
+      "requiresReasonToOverride": true
+    }
+  ]
+}

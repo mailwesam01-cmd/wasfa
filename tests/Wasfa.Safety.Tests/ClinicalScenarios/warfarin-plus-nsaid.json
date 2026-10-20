@@ -1,0 +1,38 @@
+{
+  "scenarioName": "Warfarin plus Ibuprofen NSAID Bleeding Risk",
+  "patient": {
+    "ageYears": 68,
+    "weightKg": 75.0,
+    "gender": "male",
+    "isPregnant": false,
+    "renalImpairment": "Normal",
+    "activeMedications": [
+      {
+        "id": "med-1",
+        "moleculeCode": "B01AA03",
+        "brandName": "Coumadin",
+        "strength": "5 mg",
+        "frequency": "QD",
+        "authoredOn": "2026-01-01T00:00:00Z",
+        "status": "active"
+      }
+    ],
+    "allergies": [],
+    "conditionCodes": ["I48.0"]
+  },
+  "proposedMedication": {
+    "moleculeCode": "M01AE01",
+    "brandName": "Brufen",
+    "doseQuantity": 400.0,
+    "doseUnit": "mg",
+    "frequency": "TID",
+    "durationDays": 5
+  },
+  "expectedFindings": [
+    {
+      "code": "DDI.WARFARIN.NSAID",
+      "severity": "Major",
+      "requiresReasonToOverride": true
+    }
+  ]
+}
