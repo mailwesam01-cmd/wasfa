@@ -20,6 +20,25 @@ list.
 
 ---
 
+## Visual Showcase (Screenshots)
+
+### 1. Prescriber Workstation (Angular) — Live Clinical Safety Check
+> *Real-time drug interaction detection (Warfarin + Ibuprofen) showing severity grading, plain clinical consequence, and mandatory override reason.*
+
+![Prescriber Safety Warning](./docs/screenshots/prescriber-safety-warning.png)
+
+### 2. Patient Consolidated Medication Card (Flutter Web)
+> *Verified HL7 FHIR emergency medication card with bilingual support, daily doses schedule, and access consent controls.*
+
+![Patient Medication Card](./docs/screenshots/patient-med-card.png)
+
+### 3. Community Pharmacy Dispense Portal (Flutter Web)
+> *Pharmacist scans the prescription short code (`WASFA-8931`), reviews clinical overrides, and issues standard FHIR `MedicationDispense`.*
+
+![Pharmacy Dispense](./docs/screenshots/pharmacy-dispense.png)
+
+---
+
 ## The Problem
 
 Jordan has a mature national electronic health record through the **Hakeem** program
